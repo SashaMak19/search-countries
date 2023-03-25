@@ -1,14 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchByRegion } from 'service/country-service';
-import {
-  Container,
-  SearchForm,
-  Section,
-  Heading,
-  Loader,
-  CountryList,
-} from 'components';
+import { Container, SearchForm, Section, CountryList } from 'components';
 
 export const CountrySearch = () => {
   const [countries, setCountries] = useState([]);
