@@ -1,0 +1,18 @@
+import { Header } from 'components';
+import { CountrySearch, Home, Country } from 'pages';
+import { Route, Routes, Navigate } from 'react-router-dom';
+
+export const App = () => {
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Home />} />
+          <Route path="country" element={<CountrySearch />} />
+          <Route path="country/:countryId" element={<Country />} />
+          <Route path="*" element={<Navigate to="/" replace={true} />} />
+        </Route>
+      </Routes>
+    </div>
+  );
+};
